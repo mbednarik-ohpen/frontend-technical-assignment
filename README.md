@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+## 🧩 Frontend Technical Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+We're excited to get to know you — not just your technical skills, but how you think, learn, and approach problems. For us, character, motivation, drive, and a willingness to grow matter just as much as code.
 
-Currently, two official plugins are available:
+This assignment is meant to give you a taste of what working with us feels like. Think of it more as a conversation starter than a test.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Remember: it's not about perfection. It's about showing your thought process, your curiosity, and your approach to learning and solving problems.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🗃️ What you'll get
+Below is a link to a Figma file. There are 2 parts to it:
 
-## Expanding the ESLint configuration
+[Figma file](https://www.figma.com/design/TTNgFDV6QjMRMbkxatbG1c/FE---Home-assignment?node-id=5-8671&t=STaTNG3tW31Udddt-0)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **The onboarding flow:** this is the required portion of the assignment. It's highlighted in green in the Figma file.
+2. **The rest of the application:** this is for you to pick and choose features from if you have time left.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎯 What we expect
+We want you to fork the repository and implement the following features:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#### Base features
+- Form handling
+  - Some input fields require data to be fetched from the API (use the `json-server` GET endpoints for this).
+- Input validation
+  - The form inputs should be validated and a basic error message displayed if some of them is invalid.
+- Form submission
+  - Once the whole form is filled out correctly, the user should be able to send the form data to the API (use the `json-server` POST endpoint for this).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### Optional features
+This part is not required. If you're done with the required functionality, it's up to you to choose what to do next.  You can either polish the onboarding flow, or pick a completely new part of the UI from the Figma file and implement that. This is your chance to show us what you got!
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Technical requirements
+- This repository is initialized with React, but if you prefer another FE framework, it's up to you. You can use any component library, CSS solution, framework, package or AI tooling.
+- We're also using `json-server` for simulating an API. You can read more about it [here](https://www.npmjs.com/package/json-server).
+    - Start the `json-server` with `npm run api:start`.
+    - Reset the `json-server` to original data with `npm run api:reset`
+    - Available endpoints:
+        - POST `http://localhost:3001/submission` - submit the final form data to this endpoint. See existing entries in `db.json` for the required shape.
+        - GET `http://localhost:3001/environment` - fetch available environments
+        - GET `http://localhost:3001/region` - fetch available regions
+        - GET `http://localhost:3001/industry` - fetch available industries
+        - GET `http://localhost:3001/number-of-employees` - fetch available employee count ranges
+        - GET `http://localhost:3001/country` - fetch available countries
+        - GET `http://localhost:3001/color` - fetch available colors
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- The onboarding flow should include proper validation.
+- Data should be fetched from and submitted to the API (we're using TanStack Query in our team).
+- The screens should be styled (we're using Tailwind in our team).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📥 Submission
+1. Push your code to a Github repository.
+2. Add a simple README with:
+    - How to install and run it.
+    - Any notes about your approach.
+3. Send us the link (if your repository is private, please add `@mbednarik-ohpen` and `@denis-rahl-ohpen` as collaborators).
+
+That's it! Keep it simple and if you have any questions, please don't hesitate to write to us.
+
+### 🔜 Next steps
+- We will go over your submitted assignment.
+- If everything looks fine, we'll invite you to a technical call.
+  - No need to worry about this step. This is a time for you to walk us through your work. We’ll talk about your choices — why you built something a certain way, what alternatives you considered, what you might change with more time, and so on.
+  - If you have a project you're particularly proud of, please send it to us before the call and we can talk about it too.
+- We'll get back to you with feedback and decision.
