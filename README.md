@@ -56,7 +56,7 @@ This part is not required. If you're done with the required functionality, it's 
     - Any notes about your approach.
 3. Send us the link (if your repository is private, please add `@mbednarik-ohpen` and `@denis-rahl-ohpen` as collaborators).
 
-That's it! Keep it simple and if you have any questions, please don't hesitate to write to us.
+That's it! Keep it simple and if you have any questions, please don't hesitate to reach out.
 
 ### 🔜 Next steps
 - We will go over your submitted assignment.
